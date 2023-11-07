@@ -27,11 +27,11 @@ always @(posedge clk) begin
       271: hb <= 1'b1;
       (308 - $signed(hoffs)): hs <= 1'b0;
       (340 - $signed(hoffs)): hs <= 1'b1;
-      (383): begin
+      383: begin
         vcount <= vcount + 9'd1;
         hcount <= 9'b0;
         case (vcount)
-          15: vb <= 1'b0;
+           15: vb <= 1'b0;
           239: vb <= 1'b1;
           (249 - $signed(voffs)) : vs <= 1'b0;
           (252 - $signed(voffs)) : vs <= 1'b1;
